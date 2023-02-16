@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadtbwt5636-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadtbwt5636-tenant-component
+    app.kubernetes.io/part-of: loadtbwt5636-tenant-app
+  name: loadtbwt5636-tenant-component
+  namespace: loadtbwt5636-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadtbwt5636-tenant-component
+    weight: null
+status: {}
